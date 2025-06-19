@@ -154,7 +154,7 @@ class PropertiesBloc extends Bloc<PropertiesEvent, PropertiesState> {
       // Mock empty data for now
       const properties = <Property>[];
 
-      emit(PropertiesLoaded(
+      emit(const PropertiesLoaded(
         properties: properties,
         filteredProperties: properties,
       ));
@@ -176,7 +176,7 @@ class PropertiesBloc extends Bloc<PropertiesEvent, PropertiesState> {
         final updatedProperties = List<Property>.from(currentState.properties)
           ..add(event.property);
 
-        emit(PropertyOperationSuccess('تم إضافة العقار بنجاح'));
+        emit(const PropertyOperationSuccess('تم إضافة العقار بنجاح'));
         emit(currentState.copyWith(
           properties: updatedProperties,
           filteredProperties: _applyFilters(
@@ -206,7 +206,7 @@ class PropertiesBloc extends Bloc<PropertiesEvent, PropertiesState> {
             .map((p) => p.id == event.property.id ? event.property : p)
             .toList();
 
-        emit(PropertyOperationSuccess('تم تحديث العقار بنجاح'));
+        emit(const PropertyOperationSuccess('تم تحديث العقار بنجاح'));
         emit(currentState.copyWith(
           properties: updatedProperties,
           filteredProperties: _applyFilters(
@@ -236,7 +236,7 @@ class PropertiesBloc extends Bloc<PropertiesEvent, PropertiesState> {
             .where((p) => p.id != event.propertyId)
             .toList();
 
-        emit(PropertyOperationSuccess('تم حذف العقار بنجاح'));
+        emit(const PropertyOperationSuccess('تم حذف العقار بنجاح'));
         emit(currentState.copyWith(
           properties: updatedProperties,
           filteredProperties: _applyFilters(

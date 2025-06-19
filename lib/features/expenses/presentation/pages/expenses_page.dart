@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons/lucide_icons.dart';
+import 'package:flutter_vector_icons/lucide_icons.dart';
 
 import '../../../../core/constants/app_constants.dart';
 import '../../../../shared/widgets/app_card.dart';
@@ -244,7 +244,7 @@ class _ExpensesPageState extends State<ExpensesPage> {
                                         Container(
                                           padding: EdgeInsets.all(12.w),
                                           decoration: BoxDecoration(
-                                            color: _getCategoryColor(expense.category).withOpacity(0.1),
+                                            color: _getCategoryColor(expense.category).withAlpha(0.1),
                                             borderRadius: BorderRadius.circular(12.r),
                                           ),
                                           child: Icon(

@@ -126,7 +126,7 @@ class TenantsBloc extends Bloc<TenantsEvent, TenantsState> {
       await Future.delayed(const Duration(milliseconds: 500));
       const tenants = <Tenant>[];
 
-      emit(TenantsLoaded(
+      emit(const TenantsLoaded(
         tenants: tenants,
         filteredTenants: tenants,
       ));
@@ -147,7 +147,7 @@ class TenantsBloc extends Bloc<TenantsEvent, TenantsState> {
         final updatedTenants = List<Tenant>.from(currentState.tenants)
           ..add(event.tenant);
 
-        emit(TenantOperationSuccess('تم إضافة المستأجر بنجاح'));
+        emit(const TenantOperationSuccess('تم إضافة المستأجر بنجاح'));
         emit(currentState.copyWith(
           tenants: updatedTenants,
           filteredTenants: _applySearchFilter(
@@ -174,7 +174,7 @@ class TenantsBloc extends Bloc<TenantsEvent, TenantsState> {
             .map((t) => t.id == event.tenant.id ? event.tenant : t)
             .toList();
 
-        emit(TenantOperationSuccess('تم تحديث المستأجر بنجاح'));
+        emit(const TenantOperationSuccess('تم تحديث المستأجر بنجاح'));
         emit(currentState.copyWith(
           tenants: updatedTenants,
           filteredTenants: _applySearchFilter(
@@ -201,7 +201,7 @@ class TenantsBloc extends Bloc<TenantsEvent, TenantsState> {
             .where((t) => t.id != event.tenantId)
             .toList();
 
-        emit(TenantOperationSuccess('تم حذف المستأجر بنجاح'));
+        emit(const TenantOperationSuccess('تم حذف المستأجر بنجاح'));
         emit(currentState.copyWith(
           tenants: updatedTenants,
           filteredTenants: _applySearchFilter(

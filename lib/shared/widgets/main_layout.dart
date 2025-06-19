@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons/lucide_icons.dart';
+import 'package:flutter_vector_icons/lucide_icons.dart';
 
 import '../../core/constants/app_constants.dart';
 
@@ -60,7 +60,7 @@ class _MainLayoutState extends State<MainLayout> {
   }
 
   void _updateSelectedIndex() {
-    final location = GoRouterState.of(context).location;
+    final location = GoRouterState.of(context).uri.toString();
     for (int i = 0; i < _navigationItems.length; i++) {
       if (location.startsWith(_navigationItems[i].route)) {
         setState(() {
@@ -80,7 +80,7 @@ class _MainLayoutState extends State<MainLayout> {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withAlpha(0.1),
               blurRadius: 10,
               offset: const Offset(0, -2),
             ),
@@ -111,7 +111,7 @@ class _MainLayoutState extends State<MainLayout> {
                     ),
                     decoration: BoxDecoration(
                       color: isSelected
-                          ? const Color(AppConstants.primaryColor).withOpacity(0.1)
+                          ? const Color(AppConstants.primaryColor).withAlpha(0.1)
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(12.r),
                     ),

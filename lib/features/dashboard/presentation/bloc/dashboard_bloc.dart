@@ -122,7 +122,7 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
 
       const recentActivities = <RecentActivity>[];
 
-      emit(DashboardLoaded(
+      emit(const DashboardLoaded(
         stats: stats,
         recentActivities: recentActivities,
       ));

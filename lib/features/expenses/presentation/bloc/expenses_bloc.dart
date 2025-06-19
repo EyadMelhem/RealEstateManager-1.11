@@ -197,7 +197,7 @@ class ExpensesBloc extends Bloc<ExpensesEvent, ExpensesState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(ExpenseOperationSuccess('تم إضافة المصروف بنجاح'));
+      emit(const ExpenseOperationSuccess('تم إضافة المصروف بنجاح'));
       add(LoadExpenses());
     } catch (e) {
       emit(ExpensesError('فشل في إضافة المصروف: ${e.toString()}'));
@@ -210,7 +210,7 @@ class ExpensesBloc extends Bloc<ExpensesEvent, ExpensesState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(ExpenseOperationSuccess('تم تحديث المصروف بنجاح'));
+      emit(const ExpenseOperationSuccess('تم تحديث المصروف بنجاح'));
       add(LoadExpenses());
     } catch (e) {
       emit(ExpensesError('فشل في تحديث المصروف: ${e.toString()}'));
@@ -223,7 +223,7 @@ class ExpensesBloc extends Bloc<ExpensesEvent, ExpensesState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(ExpenseOperationSuccess('تم حذف المصروف بنجاح'));
+      emit(const ExpenseOperationSuccess('تم حذف المصروف بنجاح'));
       add(LoadExpenses());
     } catch (e) {
       emit(ExpensesError('فشل في حذف المصروف: ${e.toString()}'));

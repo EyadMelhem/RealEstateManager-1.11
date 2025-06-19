@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons/lucide_icons.dart';
+import 'package:flutter_vector_icons/lucide_icons.dart';
 
 import '../../../../core/constants/app_constants.dart';
 import '../../../../shared/widgets/app_card.dart';
@@ -148,9 +148,9 @@ class _AddContractPageState extends State<AddContractPage> {
 
                       TextFormField(
                         controller: _monthlyRentController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: 'الإيجار الشهري (${AppConstants.currency}) *',
-                          prefixIcon: const Icon(LucideIcons.dollarSign),
+                          prefixIcon: Icon(LucideIcons.dollarSign),
                         ),
                         keyboardType: TextInputType.number,
                         validator: (value) {
@@ -167,9 +167,9 @@ class _AddContractPageState extends State<AddContractPage> {
 
                       TextFormField(
                         controller: _securityDepositController,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: 'مبلغ التأمين (${AppConstants.currency})',
-                          prefixIcon: const Icon(LucideIcons.shield),
+                          prefixIcon: Icon(LucideIcons.shield),
                         ),
                         keyboardType: TextInputType.number,
                         validator: (value) {

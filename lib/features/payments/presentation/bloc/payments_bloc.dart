@@ -171,7 +171,7 @@ class PaymentsBloc extends Bloc<PaymentsEvent, PaymentsState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(PaymentOperationSuccess('تم إضافة الدفعة بنجاح'));
+      emit(const PaymentOperationSuccess('تم إضافة الدفعة بنجاح'));
       add(LoadPayments());
     } catch (e) {
       emit(PaymentsError('فشل في إضافة الدفعة: ${e.toString()}'));
@@ -184,7 +184,7 @@ class PaymentsBloc extends Bloc<PaymentsEvent, PaymentsState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(PaymentOperationSuccess('تم تحديث الدفعة بنجاح'));
+      emit(const PaymentOperationSuccess('تم تحديث الدفعة بنجاح'));
       add(LoadPayments());
     } catch (e) {
       emit(PaymentsError('فشل في تحديث الدفعة: ${e.toString()}'));
@@ -197,7 +197,7 @@ class PaymentsBloc extends Bloc<PaymentsEvent, PaymentsState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(PaymentOperationSuccess('تم حذف الدفعة بنجاح'));
+      emit(const PaymentOperationSuccess('تم حذف الدفعة بنجاح'));
       add(LoadPayments());
     } catch (e) {
       emit(PaymentsError('فشل في حذف الدفعة: ${e.toString()}'));

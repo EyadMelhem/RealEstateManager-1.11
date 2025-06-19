@@ -133,7 +133,7 @@ class ContractsBloc extends Bloc<ContractsEvent, ContractsState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(ContractOperationSuccess('تم إضافة العقد بنجاح'));
+      emit(const ContractOperationSuccess('تم إضافة العقد بنجاح'));
       add(LoadContracts());
     } catch (e) {
       emit(ContractsError('فشل في إضافة العقد: ${e.toString()}'));
@@ -146,7 +146,7 @@ class ContractsBloc extends Bloc<ContractsEvent, ContractsState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(ContractOperationSuccess('تم تحديث العقد بنجاح'));
+      emit(const ContractOperationSuccess('تم تحديث العقد بنجاح'));
       add(LoadContracts());
     } catch (e) {
       emit(ContractsError('فشل في تحديث العقد: ${e.toString()}'));
@@ -159,7 +159,7 @@ class ContractsBloc extends Bloc<ContractsEvent, ContractsState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(ContractOperationSuccess('تم حذف العقد بنجاح'));
+      emit(const ContractOperationSuccess('تم حذف العقد بنجاح'));
       add(LoadContracts());
     } catch (e) {
       emit(ContractsError('فشل في حذف العقد: ${e.toString()}'));
@@ -172,7 +172,7 @@ class ContractsBloc extends Bloc<ContractsEvent, ContractsState> {
   ) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
-      emit(ContractOperationSuccess('تم تغيير حالة العقد بنجاح'));
+      emit(const ContractOperationSuccess('تم تغيير حالة العقد بنجاح'));
       add(LoadContracts());
     } catch (e) {
       emit(ContractsError('فشل في تغيير حالة العقد: ${e.toString()}'));

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fl_chart/fl_chart.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons/lucide_icons.dart';
+import 'package:flutter_vector_icons/lucide_icons.dart';
 
 import '../../../../core/constants/app_constants.dart';
 import '../../../../shared/widgets/app_card.dart';
@@ -235,7 +234,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           children: state.recentPayments.take(5).map((payment) {
                             return ListTile(
                               leading: CircleAvatar(
-                                backgroundColor: const Color(AppConstants.primaryColor).withOpacity(0.1),
+                                backgroundColor: const Color(AppConstants.primaryColor).withAlpha(0.1),
                                 child: Icon(
                                   LucideIcons.creditCard,
                                   color: const Color(AppConstants.primaryColor),
@@ -293,7 +292,7 @@ class _DashboardPageState extends State<DashboardPage> {
               width: 48.w,
               height: 48.h,
               decoration: BoxDecoration(
-                color: const Color(AppConstants.primaryColor).withOpacity(0.1),
+                color: const Color(AppConstants.primaryColor).withAlpha(0.1),
                 borderRadius: BorderRadius.circular(12.r),
               ),
               child: Icon(

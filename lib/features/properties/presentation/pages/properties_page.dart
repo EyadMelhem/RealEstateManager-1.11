@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lucide_icons/lucide_icons.dart';
+import 'package:flutter_vector_icons/lucide_icons.dart';
 
 import '../../../../core/constants/app_constants.dart';
 import '../../../../shared/widgets/app_card.dart';
@@ -269,8 +269,8 @@ class _PropertiesPageState extends State<PropertiesPage> {
                                           ),
                                           decoration: BoxDecoration(
                                             color: property.isAvailable
-                                                ? const Color(AppConstants.successColor).withOpacity(0.1)
-                                                : const Color(AppConstants.warningColor).withOpacity(0.1),
+                                                ? const Color(AppConstants.successColor).withAlpha(0.1)
+                                                : const Color(AppConstants.warningColor).withAlpha(0.1),
                                             borderRadius: BorderRadius.circular(12.r),
                                           ),
                                           child: Text(
