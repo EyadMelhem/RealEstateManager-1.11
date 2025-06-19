@@ -48,7 +48,7 @@ dependencies:
   
   # Icons
   cupertino_icons: ^1.0.6
-  lucide_icons: ^0.294.0
+  lucide_icons: any
 
 dev_dependencies:
   flutter_test:
