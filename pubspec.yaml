@@ -44,7 +44,7 @@ dependencies:
 
   # PDF & Export
   pdf: ^4.0.0
-  printing: ^6.0.0
+  printing: ^9.1.6
 
   # Icons
   cupertino_icons: ^1.0.2
