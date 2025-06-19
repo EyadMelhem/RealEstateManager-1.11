@@ -47,7 +47,7 @@ dependencies:
   printing: ^6.0.0
 
   # Icons
-  cupertino_icons: ^2.0.0
+  cupertino_icons: ^1.0.2
   flutter_vector_icons: ^2.0.0
 
 dev_dependencies:
