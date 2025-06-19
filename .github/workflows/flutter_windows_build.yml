@@ -3,7 +3,7 @@ name: Build Flutter Windows EXE
 on:
   push:
     branches:
-      - main  # غيّرها إذا كنت تستخدم فرعًا آخر
+      - main
   workflow_dispatch:
 
 jobs:
@@ -17,8 +17,6 @@ jobs:
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
-        with:
-          flutter-version: 'stable'  # ← هذا فقط يكفي
 
       - name: Enable Windows Desktop
         run: flutter config --enable-windows-desktop
